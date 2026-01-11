@@ -1,3 +1,12 @@
+:root {
+    --background-color: #F3F3F3;
+    --road-color: #E8E8E8;
+    --line-color: #D9D9D9;
+    --text-color: #838383;
+    --text-secondary-color: #434343;
+    --font-defaults: "Cascadia Mono", monospace;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +17,7 @@
 nav {
     position: absolute;
     /*background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF00 100%);*/
-    font-family: "Cascadia Mono", monospace;
+    font-family: var(--font-defaults);
     width: 100vw;
     height: 100vh;
     z-index: 5;
@@ -18,23 +27,20 @@ nav {
     gap: 0.5rem;
 }
 
+nav * {
+    color: var(--text-color);
+}
+
 nav h1 {
     font-size: 4rem;
-    color: #838383;
 }
 
 nav span {
     font-size: 1.75rem;
-    /*text-decoration: none;*/
-    transition: color 0.3s ease;
-}
-
-nav span * {
-    color: #838383;
 }
 
 nav .active {
-    color: #434343;
+    color: var(--text-secondary-color);
 }
 
 .scene {
@@ -73,6 +79,17 @@ nav .active {
     background-size: 1rem 100px;
     background-repeat: repeat-y;
     background-position: center;
+    animation: moveLines 30s linear infinite;
+}
+
+/* Animations */
+@keyframes moveLines {
+    0% {
+        background-position: center 0;
+    }
+    100% {
+        background-position: center 100px;
+    }
 }
 
 /* Text Selection Color */
