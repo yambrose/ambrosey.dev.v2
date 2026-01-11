@@ -52,7 +52,7 @@ nav .active {
     background-image: radial-gradient(#E3E3E3 15%, transparent 16%);
     background-size: 2.5rem 2.5rem;
     perspective-origin: top center;
-    perspective: 7rem;
+    perspective: 10rem;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -61,7 +61,7 @@ nav .active {
 }
 
 .road {
-    background: linear-gradient(to bottom, #DADADA00 0%, #E8E8E8 60%);
+    background: linear-gradient(to bottom, #E8E8E8 0%, #e6e6e6 60%);
     width: 20rem;
     height: 100%;
     position: relative;
@@ -117,7 +117,15 @@ nav .active {
     width: 100%;
     height: 8rem;
     transform-origin: top;
+    /*transform: rotateY(90deg) translateX(-12.5rem) translateZ(12.5rem);*/
+}
+
+.left .front {
     transform: rotateY(90deg) translateX(-12.5rem) translateZ(12.5rem);
+}
+
+.right .front {
+    transform: rotateY(-90deg) translateX(12.5rem) translateZ(12.5rem);
 }
 
 .house .side {
