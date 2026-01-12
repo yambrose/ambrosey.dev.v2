@@ -15,7 +15,7 @@
     --dark-shading: #C5C5C5;
     --very-dark-shading: #A0A0A0;
     --house-height: 8rem;
-    --house-width: 15rem;
+    --house-width: 19rem;
 }
 
 * {
@@ -23,6 +23,7 @@
     padding: 0;
     box-sizing: border-box;
     backface-visibility: hidden;
+    touch-action: manipulation !important;
     /*outline: 1px dotted red;*/
 }
 
@@ -33,7 +34,6 @@ nav {
     width: 100vw;
     height: 100vh;
     z-index: 5;
-    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -53,6 +53,11 @@ nav span {
 
 nav .active {
     color: var(--text-secondary-color);
+}
+
+.nav-content {
+    padding: 1rem 2rem 6rem 2rem;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF00 100%);
 }
 
 .scene {
@@ -76,7 +81,7 @@ nav .active {
     overflow: hidden;
     transform-style: preserve-3d;
     transform: rotate3d(1, 0, 0, 75deg);
-    box-shadow: #E3E3E3 0 5px 5px 5px;
+    box-shadow: var(--very-dark-shading) 0 1.5rem 0.5rem 1rem;
 
 }
 
@@ -108,10 +113,6 @@ nav .active {
     transform: rotate3d(1, 0, 0, 75deg);
     overflow: visible;
     transform-origin: center;
-}
-
-.building:nth-child(1) {
-    animation: fadeAway 3s linear infinite, moveBuildings 3s linear infinite;
 }
 
 .building {
@@ -151,7 +152,6 @@ nav .active {
     transform-origin: top;
 }
 
-
 .building .roof {
     position: absolute;
     background: var(--light-shading);
@@ -163,7 +163,6 @@ nav .active {
             translateZ(var(--house-width)) /* move roof up by half its height */
             /*rotateY(45deg); !* angle the roof *!*/
 }
-
 
 /* Animations */
 @keyframes moveLines {
