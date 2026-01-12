@@ -6,6 +6,8 @@
     --text-secondary-color: #434343;
     --font-defaults: "Cascadia Mono", monospace;
 
+    --about-me-height: 10rem;
+
     
     /* Scene Defaults */
     --perspective-origin: center top;
@@ -14,8 +16,9 @@
     --medium-shading: #D9D9D9;
     --dark-shading: #C5C5C5;
     --very-dark-shading: #A0A0A0;
-    --house-height: 8rem;
-    --house-width: 19rem;
+    --house-height: 7.5rem;
+    --house-width-large: 19rem;
+    --house-width-small: 10rem;
 }
 
 * {
@@ -33,7 +36,7 @@ nav {
     font-family: var(--font-defaults);
     width: 100vw;
     height: 100vh;
-    z-index: 5;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -60,6 +63,26 @@ nav .active {
     background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF00 100%);
 }
 
+.about-me {
+    width: 45%;
+    height: var(--about-me-height);
+    padding: 2rem;
+    background: var(--road-color);
+    position: absolute;
+    z-index: 1;
+    font-family: var(--font-defaults);
+    color: var(--text-secondary-color);
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: rotate3d(1, 0, 0, 75deg) translate(-50%, -5%);
+    animation: fadeIn 500ms ease-out, aboutMeRotation 500ms ease-out forwards;
+    box-shadow: var(--very-dark-shading) 0 0 0.25rem 0.25rem;
+
+}
+
+/* Scene */
+
 .scene {
     background-color: #F3F3F3;
     background-image: radial-gradient(#E3E3E3 15%, transparent 16%);
@@ -81,7 +104,7 @@ nav .active {
     overflow: hidden;
     transform-style: preserve-3d;
     transform: rotate3d(1, 0, 0, 75deg);
-    box-shadow: var(--very-dark-shading) 0 1.5rem 0.5rem 1rem;
+    box-shadow: var(--very-dark-shading) 0 1.5rem 0.5rem 0.5rem;
 
 }
 
@@ -102,7 +125,7 @@ nav .active {
 
 .buildings {
     height: 100%;
-    width: var(--house-width);
+    width: var(--house-width-large);
     transform-style: preserve-3d;
     position: relative;
     display: flex;
@@ -135,20 +158,20 @@ nav .active {
 }
 
 .left .front {
-    transform: rotateY(90deg) translateX(calc(var(--house-width)/2 * -1)) translateZ(calc(var(--house-width)/2));
+    transform: rotateY(90deg) translateX(calc(var(--house-width-large)/2 * -1)) translateZ(calc(var(--house-width-large)/2));
 }
 
 .right .front {
-    transform: rotateY(-90deg) translateX(calc(var(--house-width)/2)) translateZ(calc(var(--house-width)/2));
+    transform: rotateY(-90deg) translateX(calc(var(--house-width-large)/2)) translateZ(calc(var(--house-width-large)/2));
 }
 
 .building .side {
     position: absolute;
     background: var(--dark-shading);
-    width: var(--house-width);
-    height: var(--house-width);
+    width: var(--house-width-large);
+    height: var(--house-width-large);
     left: 0;
-    transform: translateZ(var(--house-width)) rotateX(-90deg);
+    transform: translateZ(var(--house-width-large)) rotateX(-90deg);
     transform-origin: top;
 }
 
@@ -160,11 +183,12 @@ nav .active {
     top: 0;
     transform-origin: top;
     transform:
-            translateZ(var(--house-width)) /* move roof up by half its height */
+            translateZ(var(--house-width-large)) /* move roof up by half its height */
             /*rotateY(45deg); !* angle the roof *!*/
 }
 
 /* Animations */
+
 @keyframes moveLines {
     0% {
         background-position: center 0;
@@ -184,13 +208,53 @@ nav .active {
 
 }
 
-/* Text Selection Color */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes aboutMeRotation {
+    0% {
+        transform: rotate3d(1, 0, 0, 30deg) translate(-50%, -5%);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 0, 0) translate(-50%, -5%);
+    }
+}
+
+/* Browser Settings */
+@media (prefers-reduced-motion: reduce) {
+    .road-lines, .building {
+        animation: none;
+    }
+
+    .about-me {
+        animation: none;
+        transform: translate(-50%, -5%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .buildings {
+        width: var(--house-width-small);
+    }
+
+    .l
+}
+
+
+/* Text Selection Colors */
 ::selection {
-    background-color: #A0A0A0;
-    color: #FFFFFF;
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
 ::-moz-selection {
-    background-color: #A0A0A0;
-    color: #FFFFFF;
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
