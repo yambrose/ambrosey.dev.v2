@@ -6,8 +6,6 @@
     --text-secondary-color: #434343;
     --font-defaults: "Cascadia Mono", monospace;
 
-    --about-me-height: 10rem;
-
     
     /* Scene Defaults */
     --perspective-origin: center top;
@@ -17,8 +15,8 @@
     --dark-shading: #C5C5C5;
     --very-dark-shading: #A0A0A0;
     --house-height: 7.5rem;
-    --house-width-large: 19rem;
-    --house-width-small: 10rem;
+    --house-width: 20rem;
+    --road-width: 20rem;
 }
 
 * {
@@ -35,7 +33,7 @@ nav {
     /*background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF00 100%);*/
     font-family: var(--font-defaults);
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -65,7 +63,7 @@ nav .active {
 
 .about-me {
     width: 45%;
-    height: var(--about-me-height);
+    /*height: var(--about-me-height);*/
     padding: 2rem;
     background: var(--road-color);
     position: absolute;
@@ -93,12 +91,12 @@ nav .active {
     width: 100vw;
     overflow: hidden;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .road {
     background: linear-gradient(to bottom, #E8E8E8 0%, #e6e6e6 60%);
-    width: 20rem;
+    width: var(--road-width);
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -117,7 +115,7 @@ nav .active {
             #D9D9D9 1rem,
             #D9D9D9 3rem
     );
-    background-size: 1rem 9.5rem;
+    background-size: 1rem 9rem;
     background-repeat: repeat-y;
     background-position: center;
     animation: moveLines 3s linear infinite;
@@ -125,11 +123,11 @@ nav .active {
 
 .buildings {
     height: 100%;
-    width: var(--house-width-large);
+    width: var(--house-width);
     transform-style: preserve-3d;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1.5rem;
     background: var(--very-dark-shading);
     box-shadow: var(--very-dark-shading) 0 0 1rem 1rem;
@@ -158,20 +156,20 @@ nav .active {
 }
 
 .left .front {
-    transform: rotateY(90deg) translateX(calc(var(--house-width-large)/2 * -1)) translateZ(calc(var(--house-width-large)/2));
+    transform: rotateY(90deg) translateX(calc(var(--house-width)/2 * -1)) translateZ(calc(var(--house-width)/2));
 }
 
 .right .front {
-    transform: rotateY(-90deg) translateX(calc(var(--house-width-large)/2)) translateZ(calc(var(--house-width-large)/2));
+    transform: rotateY(-90deg) translateX(calc(var(--house-width)/2)) translateZ(calc(var(--house-width)/2));
 }
 
 .building .side {
     position: absolute;
     background: var(--dark-shading);
-    width: var(--house-width-large);
-    height: var(--house-width-large);
+    width: var(--house-width);
+    height: var(--house-width);
     left: 0;
-    transform: translateZ(var(--house-width-large)) rotateX(-90deg);
+    transform: translateZ(var(--house-width)) rotateX(-90deg);
     transform-origin: top;
 }
 
@@ -183,7 +181,7 @@ nav .active {
     top: 0;
     transform-origin: top;
     transform:
-            translateZ(var(--house-width-large)) /* move roof up by half its height */
+            translateZ(var(--house-width)) /* move roof up by half its height */
             /*rotateY(45deg); !* angle the roof *!*/
 }
 
@@ -194,16 +192,16 @@ nav .active {
         background-position: center 0;
     }
     100% {
-        background-position: center calc(var(--house-height) * -1 - 1.5rem);
+        background-position: center calc(var(--house-height) * 1 - 1.5rem);
     }
 }
 
 @keyframes moveBuildings {
     0% {
-        transform: translateY(0);
+        transform: translateY(calc(var(--house-height) * -1 - 1.5rem));
     }
     100% {
-        transform: translateY(calc(var(--house-height) * -1 - 1.5rem));
+        transform: translateY(0);
     }
 
 }
@@ -240,11 +238,111 @@ nav .active {
 }
 
 @media (max-width: 1024px) {
-    .buildings {
-        width: var(--house-width-small);
+    .road {
+        width: calc(var(--road-width) * 0.65);
     }
 
-    .l
+    .buildings {
+        width: calc(var(--house-width) * 0.65);
+    }
+
+    .left .front {
+        transform: rotateY(90deg) translateX(calc(var(--house-width)/2 * -1 * 0.65)) translateZ(calc(var(--house-width)/2 * 0.65));
+    }
+
+    .right .front {
+        transform: rotateY(-90deg) translateX(calc(var(--house-width)/2 * 0.65)) translateZ(calc(var(--house-width)/2 * 0.65));
+    }
+
+    .building .side {
+        width: calc(var(--house-width) * 0.65);
+        height: calc(var(--house-width) * 0.65);
+        transform: translateZ(calc(var(--house-width) * 0.65)) rotateX(-90deg);
+    }
+
+    .building .roof {
+        transform:
+            translateZ(calc(var(--house-width) * 0.65))
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        text-align: center;
+    }
+
+    .scene {
+        /*perspective: calc(var(--perspective) * 0.75);*/
+    }
+
+    .road {
+        width: calc(var(--road-width) * 0.45);
+    }
+
+    .buildings {
+        width: calc(var(--house-width) * 0.45);
+    }
+
+    .left .front {
+        transform: rotateY(90deg) translateX(calc(var(--house-width)/2 * -1 * 0.45)) translateZ(calc(var(--house-width)/2 * 0.45));
+    }
+
+    .right .front {
+        transform: rotateY(-90deg) translateX(calc(var(--house-width)/2 * 0.45)) translateZ(calc(var(--house-width)/2 * 0.45));
+    }
+
+    .building .side {
+        width: calc(var(--house-width) * 0.45);
+        height: calc(var(--house-width) * 0.45);
+        transform: translateZ(calc(var(--house-width) * 0.45)) rotateX(-90deg);
+    }
+
+    .building .roof {
+        transform:
+                translateZ(calc(var(--house-width) * 0.45))
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav h1 {
+        font-size: 3rem;
+    }
+
+    nav span {
+        font-size: 1.25rem;
+    }
+
+    .nav-content {
+        text-align: center;
+    }
+
+    .road {
+        width: calc(var(--road-width) * 0.3);
+    }
+
+    .buildings {
+        width: calc(var(--house-width) * 0.4);
+    }
+
+    .left .front {
+        transform: rotateY(90deg) translateX(calc(var(--house-width)/2 * -1 * 0.4)) translateZ(calc(var(--house-width)/2 * 0.4));
+    }
+
+    .right .front {
+        transform: rotateY(-90deg) translateX(calc(var(--house-width)/2 * 0.4)) translateZ(calc(var(--house-width)/2 * 0.4));
+    }
+
+    .building .side {
+        width: calc(var(--house-width) * 0.4);
+        height: calc(var(--house-width) * 0.4);
+        transform: translateZ(calc(var(--house-width) * 0.4)) rotateX(-90deg);
+    }
+
+    .building .roof {
+        transform:
+                translateZ(calc(var(--house-width) * 0.4))
+    }
 }
 
 
