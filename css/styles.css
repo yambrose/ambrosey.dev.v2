@@ -1,10 +1,25 @@
+
+@font-face {
+    font-family: "Cascadia Mono";
+    src: url('../fonts/CascadiaMono-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cascadia Mono";
+    src: url('../fonts/CascadiaMono-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: italic;
+}
+
 :root {
     --background-color: #F3F3F3;
     --road-color: #E8E8E8;
     --line-color: #D9D9D9;
     --text-color: #838383;
     --text-secondary-color: #434343;
-    --font-defaults: "Cascadia Mono", monospace;
+    --font-defaults: "Cascadia Mono";
 
     
     /* Scene Defaults */
@@ -45,11 +60,11 @@ nav * {
 }
 
 nav h1 {
-    font-size: 4rem;
+    font-size: clamp(3rem, 5vw + 1rem, 5rem);
 }
 
 nav span {
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 1.75vw + 0.5rem, 3rem);
 }
 
 nav .active {
@@ -87,7 +102,7 @@ nav .active {
     background-size: 2.5rem 2.5rem;
     perspective-origin: var(--perspective-origin);
     perspective: var(--perspective);
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     overflow: hidden;
     display: flex;
@@ -305,20 +320,16 @@ nav .active {
 
 @media (max-width: 480px) {
 
-    nav h1 {
-        font-size: 3rem;
-    }
-
-    nav span {
-        font-size: 1.25rem;
-    }
-
     .nav-content {
         text-align: center;
     }
 
     .road {
         width: calc(var(--road-width) * 0.3);
+    }
+
+    .road-lines {
+        
     }
 
     .buildings {
