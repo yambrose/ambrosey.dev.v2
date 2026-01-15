@@ -29,7 +29,6 @@ main {
 }
 
 .about-me {
-    /*height: var(--about-me-height);*/
     padding: 2rem;
     background: var(--background-color);
     z-index: 1;
@@ -63,8 +62,7 @@ main {
     object-fit: contain;
     width: clamp(10rem, 24vw + 1rem, 25rem);
     height: 20rem;
-    opacity: 0;
-    animation: 500ms fadeIn 500ms ease-out forwards, pfpIdleAnimation 5s ease-in-out infinite;
+    animation: fadeIn 500ms ease-out forwards, pfpIdleAnimation 5s ease-in-out infinite;
     z-index: 1;
     transition: scale 255ms cubic-bezier( 0.17, 0.89, 0.32, 1.27 );
 }
