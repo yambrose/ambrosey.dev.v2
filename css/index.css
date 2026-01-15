@@ -70,6 +70,7 @@ main {
 /* Scene */
 
 .scene {
+
     background-color: var(--background-color);
     background-image: radial-gradient(var(--bg-pattern-color) 15%, transparent 16%);
     background-size: 2.5rem 2.5rem;

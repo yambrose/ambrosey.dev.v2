@@ -11,14 +11,13 @@
     background-image: repeating-linear-gradient(45deg, transparent, transparent 2rem, var(--bg-pattern-color) 2rem, var(--bg-pattern-color) 4rem);
     background-color: var(--background-color);
     display: flex;
-    padding-top: var(--nav-height);
-    /*align-items: center;*/
+    padding-top: clamp(var(--nav-height) - 4rem, 20vw, var(--nav-height))
 }
 
 .projects-grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 16.5rem);
+    grid-template-columns: repeat(auto-fill, 17.5rem);
     width: 100%;
     gap: 1rem;
     box-sizing: border-box;
@@ -38,4 +37,21 @@
     background: var(--bg-pattern-color);
     height: 75%;
     object-fit: contain;
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        background: var(--card-background-color);
+        height: 20rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
 }

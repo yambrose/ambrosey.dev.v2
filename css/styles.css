@@ -77,9 +77,10 @@ a:active {
 }
 
 nav {
-    position: absolute;
+    position: fixed;
+    top: 0;
     width: 100vw;
-    height: var(--nav-height);
+    height: clamp(var(--nav-height) - 4rem, 20vw, var(--nav-height));
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -105,13 +106,6 @@ nav span .active {
     color: var(--text-secondary-color);
 }
 
-@media (max-width: 480px) {
-    .nav-content {
-        text-align: center;
-        padding: 1rem 2rem 4rem 2rem;
-    }
-}
-
 @media (max-width: 1024px) {
     nav h1 {
         letter-spacing: 0.25rem;
@@ -122,7 +116,14 @@ nav span .active {
     nav h1 {
         letter-spacing: 0;
     }
-    .nav-content {
+    nav {
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        height: var(--nav-height) - 5rem;
+        padding: 1rem 2rem 4rem 2rem;
     }
 }
