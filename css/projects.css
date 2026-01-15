@@ -1,37 +1,41 @@
+:root {
+    --background-color: #f0f0f0;
+    --bg-pattern-color: #e0e0e0;
+    --card-background-color: #ffffff;
+}
+
 .scene {
     width: 100vw;
-    height: 100dvh;
+    min-height: 100dvh;
+    max-height: max-content;
     background-image: repeating-linear-gradient(45deg, transparent, transparent 2rem, var(--bg-pattern-color) 2rem, var(--bg-pattern-color) 4rem);
     background-color: var(--background-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: var(--nav-height);
+    /*align-items: center;*/
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 16.5rem);
     width: 100%;
-    gap: 2rem;
-    padding: 4rem;
+    gap: 1rem;
     box-sizing: border-box;
-}
-
-.projects-grid:nth-child(1) {
-    padding-top: 0;
+    height: max-content;
 }
 
 .project-card {
-    /*background: var(--card-background-color);*/
-    /*border: var(--card-border);*/
-    /*box-shadow: var(--card-box-shadow);*/
+    background: var(--card-background-color);
+    height: 17.5rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    padding: 0.5rem;
 }
 
 .project-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    background: var(--bg-pattern-color);
+    height: 75%;
+    object-fit: contain;
 }

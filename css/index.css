@@ -301,11 +301,6 @@ main {
 }
 
 @media (max-width: 480px) {
-    .nav-content {
-        text-align: center;
-        padding: 1rem 2rem 4rem 2rem;
-    }
-
     .road {
         width: calc(var(--road-width) * 0.3);
     }
