@@ -106,6 +106,14 @@ nav span .active {
     color: var(--text-secondary-color);
 }
 
+/* Browser Settings */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 @media (max-width: 1024px) {
     nav h1 {
         letter-spacing: 0.25rem;
