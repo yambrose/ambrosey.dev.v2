@@ -1,3 +1,5 @@
+import {ProjectColours} from "../data/definitions.js";
+
 const projectsPath = "../data/projects_metadata.json";
 const projectsGrid = document.querySelector(".projects-grid");
 const projectDialog = document.getElementById("project-dialog");
@@ -21,6 +23,12 @@ async function renderProjects() {
 
         const cardTitle = document.createElement("h2");
         cardTitle.textContent = project.name;
+
+        const projectTypeTag = document.createElement("span");
+        projectTypeTag.classList.add("project-type-tag");
+        projectTypeTag.textContent = project.type.toUpperCase();
+        projectTypeTag.style.backgroundColor = ProjectColours[project.type] || "#ccc";
+        cardContainer.appendChild(projectTypeTag);
 
         cardContainer.append(cardImage, cardTitle);
         projectsGrid.appendChild(cardContainer);

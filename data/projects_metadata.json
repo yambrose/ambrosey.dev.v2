@@ -5,6 +5,25 @@
     "skills": ["React", "TypeScript"],
     "imageUrl": "./assets/images/cell-growth-simulator.png",
     "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
-    "liveUrl": "https://cells.ambrosey.dev"
+    "liveUrl": "https://cells.ambrosey.dev",
+    "type": "web"
+  },
+  {
+    "name": "Um i think so",
+    "description": "Yes",
+    "skills": ["AWS"],
+    "imageUrl": "./assets/images/cell-growth-simulator.png",
+    "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
+    "liveUrl": "https://cells.ambrosey.dev",
+    "type": "data"
+  },
+  {
+    "name": "Oh my gosh",
+    "description": "Yes",
+    "skills": ["AWS"],
+    "imageUrl": "./assets/images/cell-growth-simulator.png",
+    "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
+    "liveUrl": "https://cells.ambrosey.dev",
+    "type": "game"
   }
 ]
