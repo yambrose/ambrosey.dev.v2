@@ -64,7 +64,7 @@
     backface-visibility: hidden;
     font-family: var(--font-defaults);
     touch-action: manipulation !important;
-    outline: red dotted 1px;
+    /*outline: red dotted 1px;*/
 }
 
 
@@ -73,7 +73,7 @@ a {
     color: var(--link-color);
 }
 a:active {
-    color: var(--link-active-color);
+    color: var(--link-active-color); !important
 }
 
 nav {

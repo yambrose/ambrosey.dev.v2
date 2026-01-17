@@ -22,10 +22,7 @@ async function renderProjects() {
         const cardTitle = document.createElement("h2");
         cardTitle.textContent = project.name;
 
-        const cardAbout = document.createElement("p");
-        cardAbout.textContent = project.about;
-
-        cardContainer.append(cardImage, cardTitle, cardAbout);
+        cardContainer.append(cardImage, cardTitle);
         projectsGrid.appendChild(cardContainer);
     });
 

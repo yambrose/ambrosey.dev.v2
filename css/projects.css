@@ -4,6 +4,14 @@
     --card-background-color: #ffffff;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #2B2B2B;
+        --bg-pattern-color: #5D5D5D;
+        --card-background-color: #3A3A3A;
+    }
+}
+
 .scene {
     width: 100%;
     min-height: 100dvh;
@@ -31,23 +39,35 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 0.5rem;
     user-select: none;
     cursor: pointer;
+    box-shadow: var(--very-dark-shading) 0 0 0.25rem 0.25rem;
 }
 
 .project-card:active {
     box-shadow: inset 0 0 0.25rem 0.25rem var(--very-dark-shading);
+    filter: invert(15%);
 }
 
 .project-card img {
     background: var(--bg-pattern-color);
     height: 75%;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.project-card h2 {
+    font-size: clamp(1.5rem, 1.25vw + 0.25rem, 2rem);
+    text-transform: uppercase;
+    line-height: 2rem;
+    color: var(--text-color);
 }
 
 /* Project Dialog */
+
 #project-dialog:is([open]) {
+    background: var(--background-color);
     width: 30rem;
     height: 45rem;
     inset: 0;
@@ -55,14 +75,13 @@
     display: flex;
     flex-direction: column;
     border: none;
-
 }
 
 #project-dialog img {
     display: block;
     width: 100%;
     height: clamp(5rem , 55vh, 20rem);
-    object-fit: contain;
+    object-fit: cover;
     background: var(--bg-pattern-color);
 }
 
@@ -78,6 +97,7 @@
 }
 
 #project-dialog h2 {
+    color: var(--text-color);
     line-height: 2.25rem;
     font-size: clamp(1.5rem, 4vw + 0.25rem, 2.15rem);
     text-transform: uppercase;
@@ -88,8 +108,13 @@
     display: block;
     width: 12%;
     height: 0.25rem;
-    background: var(--text-secondary-color);
+    background: var(--text-color);
     margin-top: 0.25rem;
+}
+#project-dialog p {
+    color: var(--text-secondary-color);
+    font-size: clamp(1rem, 1.25vw + 0.5rem, 1.15rem);
+    line-height: 1.5;
 }
 
 #project-dialog .close-button {
@@ -98,10 +123,13 @@
     padding: 0.25rem;
     font-size: 2.75rem;
     line-height: 0;
-    border: none;
+    user-select: none;
     cursor: pointer;
+    color: var(--text-color);
     background: var(--card-background-color);
     z-index: 5;
+    overflow: hidden;
+    box-shadow: var(--very-dark-shading) 0 0 0.1rem 0.1rem;
 }
 
 #project-dialog .project-skills {
@@ -111,26 +139,24 @@
 }
 
 #project-dialog .project-skills span {
+    color: var(--text-color);
     background: var(--bg-pattern-color);
     font-size: clamp(1rem, 1.25vw + 0.5rem, 1.5rem);
     padding: 0 1rem 0 1rem;
     line-height: 2rem;
     text-transform: uppercase;
+    user-select: none;
 }
 
 #project-dialog .project-footer {
+    color: var(--text-color);
     margin-top: auto;
     padding-bottom: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-#project-dialog .project-footer {
-    display: flex;
-    font-size: clamp(1rem, 1.25vw + 0.5rem, 1.5rem);
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: clamp(1.15rem, 1.25vw + 0.25rem, 1.5rem);
 }
 
 #project-dialog .project-footer a {
@@ -140,6 +166,7 @@
 
 #project-dialog .close-button:active {
     box-shadow: inset 0 0 0.25rem 0.25rem var(--very-dark-shading);
+    filter: invert(15%);
 }
 
 ::backdrop {
@@ -156,9 +183,14 @@
     .project-card {
         background: var(--card-background-color);
         height: 20rem;
+        max-width: 90%;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         padding: 0.5rem;
     }
+}
+
+@media(max-height: 480px) {
+
 }
