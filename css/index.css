@@ -18,8 +18,7 @@ main {
     position: absolute;
     width: 100vw;
     height: 100dvh;
-    padding-left: 30vw;
-    padding-right: 30vw;
+    padding-inline: clamp(5rem, 25vw + 1rem, 30rem);
     padding-bottom: clamp(2rem, 5vh, 5rem);
     display: flex;
     justify-content: flex-end;
@@ -39,7 +38,7 @@ main {
 
 .about-me h2 {
     margin-bottom: 1rem;
-    font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+    font-size: clamp(1rem, 2vw + 0.5rem, 3rem);
 }
 
 .about-me h2::after {
@@ -52,13 +51,12 @@ main {
 }
 
 .about-me p {
-    font-size: clamp(0.75rem, 1.25vw + 0.5rem, 1.15rem);
+    font-size: clamp(0.75rem, 0.5vw + 0.5rem, 2rem);
     line-height: 1.5;
 }
 
 
 .pfp {
-    transform: translateY(25%);
     object-fit: contain;
     width: clamp(10rem, 24vw + 1rem, 25rem);
     height: 20rem;
@@ -206,13 +204,13 @@ main {
 
 @keyframes pfpIdleAnimation {
     0% {
-        transform: translateY(25%) rotate(-5deg);
+        transform: translateY(5vh) rotate(-5deg);
     }
     50% {
-        transform: translateY(27%) rotate(-3deg);
+        transform: translateY(8vh) rotate(-3deg);
     }
     100% {
-        transform: translateY(25%) rotate(-5deg);
+        transform: translateY(5vh) rotate(-5deg);
     }
 }
 

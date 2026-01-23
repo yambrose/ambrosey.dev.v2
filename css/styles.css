@@ -70,8 +70,10 @@
 a {
     color: var(--link-color);
 }
+
 a:active {
-    color: var(--link-active-color); !important
+    color: var(--link-active-color);
+!important
 }
 
 nav {
@@ -92,8 +94,8 @@ nav * {
 }
 
 nav h1 {
-    letter-spacing: 1rem;
-    font-size: clamp(3rem, 5vw + 1rem, 5.5rem);
+    letter-spacing: 0.75rem;
+    font-size: clamp(3rem, 3.5vw + 1rem, 5.5rem);
 }
 
 nav span {
@@ -122,6 +124,7 @@ nav span .active {
     nav h1 {
         letter-spacing: 0;
     }
+
     nav {
         text-align: center;
     }
@@ -129,7 +132,7 @@ nav span .active {
 
 @media (max-width: 480px) {
     nav {
-        height: var(--nav-height) - 5rem;
+        height: var(--nav-height);
         padding: 1rem 2rem 4rem 2rem;
     }
 }
