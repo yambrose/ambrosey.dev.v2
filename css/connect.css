@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    max-width: 40rem;
+    max-width: 50rem;
     width: 100%;
     box-sizing: border-box;
     user-select: none;
@@ -54,7 +54,6 @@
     width: 100%;
     height: 100%;
     background-image: url("../assets/svgs/heart-pattern.svg");
-    /*background: green;*/
     background-size: 2rem;
     background-repeat: repeat;
     z-index: 1;
@@ -64,36 +63,52 @@
 .contact-hero {
     position: relative;
     background-image: linear-gradient(to bottom right, var(--hero-background-1) 0%, var(--hero-background-2) 100%);
-    min-height: 20vh;
+    min-height: 30vh;
     width: 100%;
     padding: 1.5rem;
     display: flex;
     justify-content: space-between;
 }
 
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: calc(1vw + 1rem);
+    border-left: 0.5rem solid var(--hero-h-color);
+    border-top: 0.5rem solid var(--hero-h-color);
+    aspect-ratio: 1/1;
+    z-index: 2;
+}
+
+
+
 .contact-hero div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     z-index: 2;
 }
 
 .contact-hero h2 {
-    font-size: clamp(2.5rem, 3vw + 1rem, 3.5rem);
+    font-size: clamp(3.5rem, 3.5vw + 1rem, 4rem);
     color: var(--hero-h-color);
-    line-height: clamp(2rem, 3vw + 1rem, 3.5rem);
+    line-height: clamp(3rem, 3.5vw + 1rem, 4rem);
     max-width: 65%;
 }
 
 .contact-hero p {
-    font-size: clamp(1rem, 1vw + 0.25rem, 2rem);
-    padding-top: clamp(1.5rem, 3vh + 1rem, 3.5rem);
+    font-size: clamp(1.5rem, 1.5vw + 0.1rem, 2.75rem);
     color: var(--hero-p-color);
+    max-width: 65%;
 }
 
 .contact-hero img {
     position: absolute;
-    flex-grow: 1;
     bottom: 0;
     right: -3rem;
-    height: clamp(1.5rem, 35vh, 35rem);
+    width: clamp(1.5rem, 30vh + 1rem, 40rem);
     max-width: 50%;
     z-index: 2;
     filter: drop-shadow(0 0 1rem var(--hero-h-color));
