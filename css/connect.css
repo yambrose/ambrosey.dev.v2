@@ -5,6 +5,8 @@
     --hero-p-color: #F5F5F5;
     --bg-pattern-color: #e0e0e0;
     --card-background-color: #ffffff;
+
+    --link-btn-depth: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +22,8 @@
 }
 
 .scene {
+    perspective-origin: var(--perspective-origin);
+    perspective: 350px;
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -94,6 +98,35 @@
     z-index: 2;
     filter: drop-shadow(0 0 1rem var(--hero-h-color));
 }
+
+.contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--medium-shading);
+    width: 100%;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.contact-methods a {
+    display: block;
+    position: relative;
+    transform-style: preserve-3d;
+    background: var(--bg-pattern-color);
+    font-size: clamp(1rem, 1vw + 0.25rem, 2rem);
+    padding: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0.25rem 0.25rem 0.5rem var(--very-dark-shading);
+}
+
+.contact-methods a:first-child {
+    flex-grow: 1;
+}
+
+
 
 
 @keyframes tweenPatternDown {
