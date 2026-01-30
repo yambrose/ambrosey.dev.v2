@@ -1,6 +1,6 @@
 import {ProjectColours} from "../data/definitions.js";
 
-const projectsPath = "../data/projects_metadata.json";
+const projectsPath = "../data/projects_data.json";
 const projectsGrid = document.querySelector(".projects-grid");
 const projectDialog = document.getElementById("project-dialog");
 

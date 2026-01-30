@@ -1,0 +1,14 @@
+[
+  {
+    "background": "purple",
+    "companyName": "Jitto",
+    "jobTitle": "Software Engineer Intern",
+    "date": "Jan 2025 - Dec 2025",
+    "companyLogo": "./assets/images/cell-growth-simulator.png",
+    "milestones": [
+      "Did this thing",
+      "Did the other thing",
+      "Last thing"
+    ]
+  }
+]
