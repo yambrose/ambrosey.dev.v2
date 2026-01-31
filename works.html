@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
     <title>Title</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/works.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/works.css" rel="stylesheet">
 </head>
 <body>
 <nav>
@@ -21,22 +21,24 @@
 <section class="scene">
     <div class="experiences-container">
         <h1>Experience</h1>
-        <div class="experience">
-            <img src="assets/images/LoadingWheel.png" alt="image of company">
-            <section>
-                <div class="company">
-                    <div>
-                        <h2 class="name">Company Name</h2>
-                        <p class="role-name">Software Engineer</p>
+        <div class="experiences-flex">
+            <div class="experience">
+                <img alt="image of company" src="assets/images/LoadingWheel.png">
+                <section>
+                    <div class="company">
+                        <div>
+                            <h2 class="name">Company Name</h2>
+                            <p class="role-name">Software Engineer</p>
+                        </div>
+                        <p class="date">2026</p>
                     </div>
-                    <p class="date">2026</p>
-                </div>
 
-                <ul>
-                   <li>Did this thing</li>
-                   <li>Did that thing</li>
-                </ul>
-            </section>
+                    <ul>
+                        <li>Did this thing</li>
+                        <li>Did that thing</li>
+                    </ul>
+                </section>
+            </div>
         </div>
     </div>
     <div class="projects-container">
@@ -47,9 +49,9 @@
 </section>
 <dialog id="project-dialog">
     <form method="dialog">
-        <button class="close-button" autofocus>&times;</button>
+        <button autofocus class="close-button">&times;</button>
     </form>
-    <img src="" alt="Project Image"/>
+    <img alt="Project Image" src=""/>
     <section>
         <h2>Title</h2>
         <p>Description</p>
@@ -63,6 +65,6 @@
         </span>
     </section>
 </dialog>
-<script type="module" src="scripts/worksHandler.js"></script>
+<script src="scripts/worksHandler.js" type="module"></script>
 </body>
 </html>
