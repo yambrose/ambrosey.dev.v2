@@ -2,6 +2,8 @@
     --background-color: #f0f0f0;
     --bg-pattern-color: #e0e0e0;
     --card-background-color: #ffffff;
+
+    --experience-text-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -9,6 +11,8 @@
         --background-color: #2B2B2B;
         --bg-pattern-color: #353535;
         --card-background-color: #3A3A3A;
+
+        --experience-text-color: #FFFFFF;
     }
 }
 
@@ -28,6 +32,7 @@
 }
 
 .scene > div h1 {
+    color: var(--text-color);
     margin-bottom: 2rem;
 }
 
@@ -39,20 +44,23 @@
 
 .experience {
     padding: 1rem;
-    background: yellow;
     display: flex;
     gap: 1rem;
+    color: var(--experience-text-color);
+    box-shadow: var(--very-dark-shading) 0 0 0.25rem 0.25rem;
 }
 
 .experience img {
     width: clamp(5rem, 10vw + 1rem, 25rem);
+    aspect-ratio: 1/1;
     object-fit: contain;
+    filter: shadow(0 3px 15px var(--experience-text-color));
 }
 
 .experience section {
     width: 100%;
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     flex-direction: column;
 }
 
@@ -64,18 +72,24 @@
 }
 
 .company .name {
-    font-size: clamp(1.5rem, 1.5vw + 1rem, 2.5rem);
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 1.5vw + 0.5rem, 2.5rem);
 }
 
-.company .role-name {
-    font-size: clamp(0.75rem, 0.75vw + 1rem, 1.5rem);
+.company .role-name, .company .date {
+    font-size: clamp(0.75rem, 0.75vw + 0.5rem, 1.5rem);
+    font-weight: 400;
 }
 
-.company .date {
-    font-size: clamp(0.75rem, 0.75vw + 1rem, 1.5rem);
+.experience ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 300;
 }
 
 .experience li {
+    font-size: clamp(0.6rem, 0.75vw + 0.25rem, 1.3rem);
     list-style: none;
 }
 
@@ -86,12 +100,11 @@
 .projects-grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(min(17.5rem, 100%), 17.5rem));
+    grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
     width: 100%;
     gap: 1.5rem;
     box-sizing: border-box;
     height: max-content;
-    /*padding: 0 1rem;*/
 }
 
 .project-card {

@@ -1,16 +1,21 @@
 import {ProjectColours} from "../data/definitions.js";
 
+const matchDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 const projectsPath = "../data/projects_data.json";
 const projectsGrid = document.querySelector(".projects-grid");
 const projectDialog = document.getElementById("project-dialog");
 
-const getProjectsFromMetadata = async () => {
-    const response = await fetch(projectsPath);
+const experiencesPath = "../data/experience_data.json";
+const experiencesContainer = document.querySelector(".experiences-flex");
+
+const getJsonMetadata = async (path) => {
+    const response = await fetch(path);
     return await response.json();
 };
 
 async function renderProjects() {
-    const projects = await getProjectsFromMetadata();
+    const projects = await getJsonMetadata(projectsPath);
     projects.forEach((project, index) => {
         const cardContainer = document.createElement("div");
         cardContainer.classList.add("project-card");
@@ -64,4 +69,53 @@ function openProjectDialog(project) {
     projectDialog.showModal();
 }
 
+async function renderExperiences() {
+    const experiences = await getJsonMetadata(experiencesPath);
+    experiencesContainer.innerHTML = "";
+
+    experiences.forEach((experience) => {
+        const experienceDiv = document.createElement("div");
+        experienceDiv.classList.add("experience");
+        experienceDiv.style.backgroundColor = matchDarkMode ? experience.background[1] : experience.background[0];
+
+        const img = document.createElement("img");
+        img.src = experience.companyLogo;
+        img.alt = `${experience.companyName} logo`;
+
+        const section = document.createElement("section");
+
+        const companyDiv = document.createElement("div");
+        companyDiv.classList.add("company");
+
+        const nameContainer = document.createElement("div");
+        const name = document.createElement("h2");
+        name.classList.add("name");
+        name.textContent = experience.companyName;
+
+        const role = document.createElement("p");
+        role.classList.add("role-name");
+        role.textContent = experience.jobTitle;
+
+        nameContainer.append(name, role);
+
+        const date = document.createElement("p");
+        date.classList.add("date");
+        date.textContent = experience.date;
+
+        companyDiv.append(nameContainer, date);
+
+        const ul = document.createElement("ul");
+        experience.milestones.forEach((milestone) => {
+            const li = document.createElement("li");
+            li.textContent = milestone;
+            ul.appendChild(li);
+        });
+
+        section.append(companyDiv, ul);
+        experienceDiv.append(img, section);
+        experiencesContainer.appendChild(experienceDiv);
+    });
+}
+
 renderProjects();
+renderExperiences();

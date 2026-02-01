@@ -25,5 +25,32 @@
     "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
     "liveUrl": "https://cells.ambrosey.dev",
     "type": "game"
+  },
+  {
+    "name": "Cell Growth Simulator",
+    "description": "Heavily inspired by Conway’s Game of Life---The Cell Growth Simulator is a web app that simulates bacterial growth on a grid based canvas.",
+    "skills": ["React", "TypeScript"],
+    "imageUrl": "./assets/images/cell-growth-simulator.png",
+    "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
+    "liveUrl": "https://cells.ambrosey.dev",
+    "type": "web"
+  },
+  {
+    "name": "Um i think so",
+    "description": "Yes",
+    "skills": ["AWS"],
+    "imageUrl": "./assets/images/cell-growth-simulator.png",
+    "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
+    "liveUrl": "https://cells.ambrosey.dev",
+    "type": "data"
+  },
+  {
+    "name": "Oh my gosh",
+    "description": "Yes",
+    "skills": ["AWS"],
+    "imageUrl": "./assets/images/cell-growth-simulator.png",
+    "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
+    "liveUrl": "https://cells.ambrosey.dev",
+    "type": "game"
   }
 ]

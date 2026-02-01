@@ -1,14 +1,14 @@
 [
   {
-    "background": "purple",
+    "background": ["#E4B7FE", "#9C44CE"],
     "companyName": "Jitto",
     "jobTitle": "Software Engineer Intern",
-    "date": "Jan 2025 - Dec 2025",
-    "companyLogo": "./assets/images/cell-growth-simulator.png",
+    "date": "2025",
+    "companyLogo": "./assets/svgs/experience-jitto.svg",
     "milestones": [
-      "Did this thing",
-      "Did the other thing",
-      "Last thing"
+      "Implemented backend test suites, decreasing development errors and reducing production testing by 25%.",
+      "Deployed a search tracking analytics microservice, providing useful insights on customer behaviour.",
+      "Built an automated pipeline using customer data for personalized product recommendations and targeted flyers, increasing registrations by y% and reducing business team workload."
     ]
   }
 ]
