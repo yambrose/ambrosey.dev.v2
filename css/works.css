@@ -19,10 +19,10 @@
 .scene {
     width: 100%;
     min-height: 100dvh;
-    max-height: max-content;
     background-image: repeating-linear-gradient(45deg, transparent, transparent 2rem, var(--bg-pattern-color) 2rem, var(--bg-pattern-color) 4rem);
     background-color: var(--background-color);
     display: flex;
+    gap: 3rem;
     padding-top: clamp(var(--nav-height) - 4rem, 20vw, var(--nav-height))
 }
 
@@ -37,9 +37,11 @@
 }
 
 /* Experience */
-.experiences-container {
+
+.experiences-flex {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 .experience {
@@ -100,7 +102,7 @@
 .projects-grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
     width: 100%;
     gap: 1.5rem;
     box-sizing: border-box;
@@ -273,6 +275,8 @@ body:has(#project-dialog[open]) {
         flex-direction: column;
         align-items: center;
     }
+
+
 
     .project-card {
         background: var(--card-background-color);
