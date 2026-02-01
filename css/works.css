@@ -17,17 +17,16 @@
 }
 
 .scene {
-    width: 100%;
     min-height: 100dvh;
     background-image: repeating-linear-gradient(45deg, transparent, transparent 2rem, var(--bg-pattern-color) 2rem, var(--bg-pattern-color) 4rem);
     background-color: var(--background-color);
     display: flex;
-    gap: 3rem;
-    padding-top: clamp(var(--nav-height) - 4rem, 20vw, var(--nav-height))
+    gap: clamp(0rem, 1.5vw + 1rem, 3rem);
+    padding-top: clamp(var(--nav-height) - 4rem, 20vh, var(--nav-height))
 }
 
 .scene > div {
-    width: 100%;
+    flex: 1;
     margin: 1rem;
 }
 
@@ -53,9 +52,10 @@
 }
 
 .experience img {
-    width: clamp(5rem, 10vw + 1rem, 25rem);
+    width: clamp(4rem, 10vw + 1rem, 20rem);
     aspect-ratio: 1/1;
     object-fit: contain;
+    object-position: top;
     filter: shadow(0 3px 15px var(--experience-text-color));
 }
 
@@ -79,19 +79,19 @@
 }
 
 .company .role-name, .company .date {
-    font-size: clamp(0.75rem, 0.75vw + 0.5rem, 1.5rem);
+    font-size: clamp(1rem, 0.75vw + 0.5rem, 1.5rem);
     font-weight: 400;
 }
 
 .experience ul {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     font-weight: 300;
 }
 
 .experience li {
-    font-size: clamp(0.6rem, 0.75vw + 0.25rem, 1.3rem);
+    font-size: clamp(0.75rem, 0.75vw + 0.25rem, 1.3rem);
     list-style: none;
 }
 
@@ -102,10 +102,10 @@
 .projects-grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     width: 100%;
-    gap: 1.5rem;
-    box-sizing: border-box;
+    padding: 1rem;
+    gap: 2rem;
     height: max-content;
 }
 
@@ -276,7 +276,9 @@ body:has(#project-dialog[open]) {
         align-items: center;
     }
 
-
+    .experience {
+        flex-direction: column;
+    }
 
     .project-card {
         background: var(--card-background-color);
@@ -285,5 +287,11 @@ body:has(#project-dialog[open]) {
         display: flex;
         flex-direction: column;
         padding: 0.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .scene {
+        flex-direction: column;
     }
 }

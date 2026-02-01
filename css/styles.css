@@ -72,7 +72,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: clamp(var(--nav-height) - 4rem, 20vw, var(--nav-height));
+    max-height: clamp(var(--nav-height) - 4rem, 20vh, var(--nav-height));
     z-index: 5;
     display: flex;
     flex-direction: column;
@@ -124,7 +124,6 @@ nav span .active {
 
 @media (max-width: 480px) {
     nav {
-        height: var(--nav-height);
         padding: 1rem 2rem 4rem 2rem;
     }
 }

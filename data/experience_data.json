@@ -10,17 +10,5 @@
       "Deployed a search tracking analytics microservice, providing useful insights on customer behaviour.",
       "Built an automated pipeline using customer data for personalized product recommendations and targeted flyers, increasing registrations by y% and reducing business team workload."
     ]
-  },
-  {
-    "background": ["#E4B7FE", "#9C44CE"],
-    "companyName": "Jitto",
-    "jobTitle": "Software Engineer Intern",
-    "date": "2025",
-    "companyLogo": "./assets/svgs/experience-jitto.svg",
-    "milestones": [
-      "Implemented backend test suites, decreasing development errors and reducing production testing by 25%.",
-      "Deployed a search tracking analytics microservice, providing useful insights on customer behaviour.",
-      "Built an automated pipeline using customer data for personalized product recommendations and targeted flyers, increasing registrations by y% and reducing business team workload."
-    ]
   }
 ]
