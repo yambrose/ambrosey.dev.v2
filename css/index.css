@@ -63,7 +63,7 @@ main {
     display: block;
     width: 12%;
     height: 0.25rem;
-    background: var(--text-secondary-color);
+    background: var(--text-color);
     margin-top: 0.25rem;
 }
 
@@ -347,18 +347,4 @@ main {
         padding-left: 5vw;
         padding-right: 5vw;
     }
-}
-
-
-
-
-/* Text Selection Colors */
-::selection {
-    background-color: var(--text-color);
-    color: var(--background-color);
-}
-
-::-moz-selection {
-    background-color: var(--text-color);
-    color: var(--background-color);
 }

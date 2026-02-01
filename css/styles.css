@@ -127,3 +127,14 @@ nav span .active {
         padding: 1rem 2rem 4rem 2rem;
     }
 }
+
+/* Text Selection Colors */
+::selection {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+::-moz-selection {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}

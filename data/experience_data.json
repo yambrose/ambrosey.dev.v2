@@ -6,9 +6,9 @@
     "date": "2025",
     "companyLogo": "./assets/svgs/experience-jitto.svg",
     "milestones": [
-      "Implemented backend test suites, decreasing development errors and reducing production testing by 25%.",
-      "Deployed a search tracking analytics microservice, providing useful insights on customer behaviour.",
-      "Built an automated pipeline using customer data for personalized product recommendations and targeted flyers, increasing registrations by y% and reducing business team workload."
+      "Built & deployed a microservice utilizing customer data to send personalized product recommendations via automated printable flyers, saving marketing workload for the business team.",
+      "Co-authored a high-performance supplier price list document parsing and normalization system that translates inconsistent formats, slangs, and abbreviations into structured data using vectorized operations.",
+      "Designed and implemented an admin operations page with a custom filtering interface, enabling real-time insights into daily customer purchase patterns."
     ]
   }
 ]
