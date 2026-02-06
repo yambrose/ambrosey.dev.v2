@@ -10,7 +10,7 @@
   },
   {
     "name": "pinnip",
-    "description": "Entry to the \"Global Game Jam 2026\"--An artistic aim game with a twist!",
+    "description": "Entry to the \"Global Game Jam 2026\"--An aim game with a twist!",
     "skills": ["Unity", "C#", "Pixel Art"],
     "imageUrl": "./assets/images/pinnip.png",
     "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
@@ -18,12 +18,12 @@
     "type": "game"
   },
   {
-    "name": "pinnip",
-    "description": "Entry to the \"Global Game Jam 2026\"--An artistic aim game with a twist!",
-    "skills": ["Unity", "C#", "Pixel Art"],
+    "name": "School Attendance Data Analysis",
+    "description": "An analysis of 2020-2021 Ontario school attendance data that displays trends across various student groups and districts.",
+    "skills": ["Jupyter", "NumPy", "Matplotlib"],
     "imageUrl": "./assets/images/cell-growth-simulator.png",
     "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
     "liveUrl": "https://cells.ambrosey.dev",
-    "type": "game"
+    "type": "data"
   }
 ]
