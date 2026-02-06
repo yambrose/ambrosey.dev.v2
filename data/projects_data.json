@@ -12,7 +12,7 @@
     "name": "pinnip",
     "description": "Entry to the \"Global Game Jam 2026\"--An artistic aim game with a twist!",
     "skills": ["Unity", "C#", "Pixel Art"],
-    "imageUrl": "./assets/images/cell-growth-simulator.png",
+    "imageUrl": "./assets/images/pinnip.png",
     "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
     "liveUrl": "https://cells.ambrosey.dev",
     "type": "game"
