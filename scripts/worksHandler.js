@@ -62,9 +62,24 @@ function openProjectDialog(project) {
         skillsContainer.appendChild(span);
     });
 
-    const links = projectDialog.querySelectorAll(".project-footer a");
-    links[0].href = project.sourceUrl;
-    links[1].href = project.liveUrl;
+    const projectSource = projectDialog.querySelector(".project-src-link");
+    const projectLive = projectDialog.querySelector(".project-live-link");
+    const projectYear = projectDialog.querySelector(".project-year");
+
+    // Reset the source link state
+    projectSource.classList.remove("disabled");
+
+    if (project.sourceUrl === "" || project.sourceUrl == null) {
+        projectSource.textContent = "private";
+        projectSource.classList.add("disabled");
+        projectSource.removeAttribute("href");
+    } else {
+        projectSource.textContent = "source";
+        projectSource.href = project.sourceUrl;
+    }
+
+    projectLive.href = project.liveUrl;
+    projectYear.textContent = `- ${project.year} -`
 
     projectDialog.showModal();
 }

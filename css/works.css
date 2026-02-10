@@ -104,7 +104,6 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     width: 100%;
-    padding: 1rem;
     gap: 2rem;
     height: max-content;
 }
@@ -245,7 +244,6 @@ body:has(#project-dialog[open]) {
 }
 
 #project-dialog .project-footer {
-    color: var(--text-color);
     margin-top: auto;
     padding-bottom: 1rem;
     display: flex;
@@ -260,9 +258,21 @@ body:has(#project-dialog[open]) {
     text-transform: uppercase;
 }
 
+#project-dialog .project-footer .project-year {
+    color: var(--text-secondary-color);
+}
+
 #project-dialog .close-button:active {
     box-shadow: inset 0 0 0.25rem 0.25rem var(--very-dark-shading);
     filter: invert(15%);
+}
+
+#project-dialog .disabled {
+    background: var(--medium-shading);
+    color: var(--text-secondary-color);
+    pointer-events: none;
+    cursor: default;
+
 }
 
 ::backdrop {
@@ -274,16 +284,18 @@ body:has(#project-dialog[open]) {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0;
     }
 
     .experience {
         flex-direction: column;
+        padding: 0.5rem;
     }
 
     .project-card {
         background: var(--card-background-color);
         height: 20rem;
-        max-width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         padding: 0.5rem;
