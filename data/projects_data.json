@@ -20,13 +20,33 @@
     "type": "game"
   },
   {
+    "name": "Minezone Website",
+    "description": "A full-stack website designed for a Mincraft server witih 300+ active players.",
+    "skills": ["React", "Django", "AWS", "DynamoDB"],
+    "year": "2026",
+    "imageUrl": "./assets/images/pinnip.png",
+    "sourceUrl": "",
+    "liveUrl": "https://cells.ambrosey.dev",
+    "type": "web"
+  },
+  {
     "name": "School Attendance Data Analysis",
     "description": "An analysis of 2020-2021 Ontario school attendance data that displays trends across various student groups and districts.",
     "skills": ["Jupyter", "NumPy", "Matplotlib"],
     "year": "2024",
     "imageUrl": "./assets/images/cell-growth-simulator.png",
-    "sourceUrl": "https://github.com/yambrose/CellGrowthSimulation",
+    "sourceUrl": "https://github.com/yambrose/SDA-Analysis",
     "liveUrl": "https://cells.ambrosey.dev",
     "type": "data"
+  },
+  {
+    "name": "Email Spam Detector",
+    "description": "A simple unigram classifier fine-tuned to detect spam emails with high accuracy and low false positives.",
+    "skills": ["Java", "Glassfish", "Maven"],
+    "year": "2023",
+    "imageUrl": "./assets/images/cell-growth-simulator.png",
+    "sourceUrl": "https://github.com/yambrose/SDA-Analysis",
+    "liveUrl": "https://cells.ambrosey.dev",
+    "type": "ml/ai"
   }
 ]
