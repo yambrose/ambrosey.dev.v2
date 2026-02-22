@@ -76,6 +76,7 @@ function openProjectDialog(project) {
     } else {
         projectSource.textContent = "source";
         projectSource.href = project.sourceUrl;
+        projectSource.classList.remove("disabled");
     }
 
     if (project.liveUrl === "" || project.liveUrl == null) {
@@ -85,6 +86,7 @@ function openProjectDialog(project) {
     } else {
         projectLive.textContent = "live";
         projectLive.href = project.liveUrl;
+        projectLive.classList.remove("disabled");
     }
 
     projectYear.textContent = `- ${project.year} -`
