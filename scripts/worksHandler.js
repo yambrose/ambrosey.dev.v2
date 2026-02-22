@@ -78,7 +78,15 @@ function openProjectDialog(project) {
         projectSource.href = project.sourceUrl;
     }
 
-    projectLive.href = project.liveUrl;
+    if (project.liveUrl === "" || project.liveUrl == null) {
+        projectLive.textContent = "unavailable";
+        projectLive.classList.add("disabled");
+        projectLive.removeAttribute("href");
+    } else {
+        projectLive.textContent = "live";
+        projectLive.classList.remove("disabled");
+    }
+
     projectYear.textContent = `- ${project.year} -`
 
     projectDialog.showModal();
