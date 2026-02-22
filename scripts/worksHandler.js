@@ -84,7 +84,7 @@ function openProjectDialog(project) {
         projectLive.removeAttribute("href");
     } else {
         projectLive.textContent = "live";
-        projectLive.classList.remove("disabled");
+        projectLive.href = project.liveUrl;
     }
 
     projectYear.textContent = `- ${project.year} -`
