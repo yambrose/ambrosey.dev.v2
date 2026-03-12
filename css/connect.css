@@ -136,7 +136,7 @@
 }
 
 .contact-methods a:first-child {
-    /*flex-grow: 1;*/
+    flex-grow: 1;
 }
 
 @media (max-width: 480px) {

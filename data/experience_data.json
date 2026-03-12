@@ -10,5 +10,17 @@
       "Co-authored a high-performance supplier price list document parsing and normalization system that translates inconsistent formats, slangs, and abbreviations into structured data using vectorized operations.",
       "Designed and implemented an admin operations page with a custom filtering interface, enabling real-time insights into daily customer purchase patterns."
     ]
+  },
+  {
+    "background": ["#E8F4F8", "#1A2A3D"],
+    "companyName": "Ontario Tech University",
+    "jobTitle": "Undergraduate Research Assistant",
+    "date": "2026",
+    "companyLogo": "./assets/svgs/experience-otu-research.svg",
+    "milestones": [
+      "Investigated ”Cultural Hallucinations” in Large Language Models (LLMs), identifying performance degradation and factual inaccuracies caused by low-resource language training data in Gujarati and Tamil.",
+      "Evaluated and benchmarked cross-lingual cultural awareness across state-of-the-art models including Gemini 2.5 Flash, Qwen-MT-Plus, and Llama 4 Maverick.",
+      "Collaborated on a comparative analysis framework to quantify how regional nuances and cultural contexts are lost or substituted by dominant western datasets during inference."
+    ]
   }
 ]
