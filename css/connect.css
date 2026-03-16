@@ -126,17 +126,18 @@
     display: block;
     position: relative;
     transform-style: preserve-3d;
-    background: var(--bg-pattern-color);
+    background: var(--hero-background-2);
     font-size: clamp(1rem, 1vw + 0.25rem, 2rem);
     padding: 1rem;
-    color: var(--text-color);
+    color: var(--hero-p-color);
     text-decoration: none;
     text-transform: uppercase;
     box-shadow: 0.25rem 0.25rem 0.5rem var(--very-dark-shading);
+    flex: 1;
 }
 
 .contact-methods a:first-child {
-    flex-grow: 1;
+    /*flex-grow: 1;*/
 }
 
 @media (max-width: 480px) {
@@ -147,7 +148,6 @@
 
     .contact-hero {
         flex-direction: column;
-        /*align-items: center;*/
         text-align: center;
         min-height: max-content;
     }
