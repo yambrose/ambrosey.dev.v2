@@ -59,6 +59,10 @@
     /*outline: red dotted 1px;*/
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 a {
     color: var(--link-color);
 }
