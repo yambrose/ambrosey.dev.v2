@@ -1,6 +1,22 @@
 [
   {
-    "background": ["#E4B7FE", "#9C44CE"],
+    "background": [
+      "#F8D9B2",
+      "#C8904D"
+    ],
+    "companyName": "Reindeere",
+    "jobTitle": "Software Engineer Intern",
+    "date": "2026",
+    "companyLogo": "./assets/svgs/experience_reindeere.svg",
+    "milestones": [
+      "Focused on building a scalable ”App Store for Robotics,” enabling modular deployment of autonomous ”missions”\nlike parking reinforcement."
+    ]
+  },
+  {
+    "background": [
+      "#E4B7FE",
+      "#9C44CE"
+    ],
     "companyName": "Jitto",
     "jobTitle": "Software Engineer Intern",
     "date": "2025",
@@ -8,11 +24,15 @@
     "milestones": [
       "Built & deployed a microservice utilizing customer data to send personalized product recommendations via automated printable flyers, saving marketing workload for the business team.",
       "Co-authored a high-performance supplier price list document parsing and normalization system that translates inconsistent formats, slangs, and abbreviations into structured data using vectorized operations.",
-      "Designed and implemented an admin operations page with a custom filtering interface, enabling real-time insights into daily customer purchase patterns."
+      "Led end-to-end development of a 'operations snapshot' page in the admin portal, spanning requirements\ngathering and technical specification writing, UI/UX design in Figma, and full implementation in React.",
+      "Implemented two-factor authentication for the admin portal using the AWS Cognito SDK, improving platform\nsecurity and access control."
     ]
   },
   {
-    "background": ["#E8F4F8", "#1A2A3D"],
+    "background": [
+      "#E8F4F8",
+      "#1A2A3D"
+    ],
     "companyName": "Ontario Tech University",
     "jobTitle": "Undergraduate Research Assistant",
     "date": "2026",
