@@ -136,8 +136,10 @@
     flex: 1;
 }
 
-.contact-methods a:first-child {
-    /*flex-grow: 1;*/
+.contact-methods a:active {
+    background: var(--hero-p-color);
+    color: var(--hero-background-2);
+    scale: 1.02
 }
 
 @media (max-width: 480px) {
