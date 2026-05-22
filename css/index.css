@@ -54,6 +54,7 @@ main {
 }
 
 .about-me h2 {
+    display: inline-block;
     margin-bottom: 1rem;
     font-size: clamp(1rem, 2vw + 0.5rem, 3rem);
 }
@@ -61,7 +62,7 @@ main {
 .about-me h2::after {
     content: '';
     display: block;
-    width: 12%;
+    width: 40%;
     height: 0.25rem;
     background: var(--text-color);
     margin-top: 0.25rem;

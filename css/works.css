@@ -21,18 +21,33 @@
     background-image: repeating-linear-gradient(45deg, transparent, transparent 2rem, var(--bg-pattern-color) 2rem, var(--bg-pattern-color) 4rem);
     background-color: var(--background-color);
     display: flex;
-    gap: clamp(0rem, 1.5vw + 1rem, 3rem);
     padding-top: clamp(var(--nav-height) - 4rem, 20vh, var(--nav-height))
 }
 
-.scene > div {
+.scene > .works-section {
     flex: 1;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
-.scene > div h1 {
+.scene > .works-section h1 {
     color: var(--text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.scene > .works-section h1::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 0.25rem;
+    margin-top: 0.25rem;
+    background: var(--text-color);
+}
+
+.works-section {
+    background: color-mix(in srgb, var(--very-dark-shading) 75%, transparent);
+    outline: 2px var(--dark-shading) solid;
+    padding: clamp(1rem, 1.5vw + 0.5rem, 2rem);
 }
 
 /* Experience */
@@ -97,7 +112,6 @@
 
 
 /* Projects */
-
 
 .projects-grid {
     display: grid;
