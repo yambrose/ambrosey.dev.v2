@@ -1,13 +1,26 @@
 [
   {
     "background": [
+      "#95BF47",
+      "#64943E"
+    ],
+    "companyName": "Shopify",
+    "jobTitle": "Incoming Software Engineer Intern",
+    "date": "2026",
+    "companyLogo": "./assets/svgs/experience-shopify.svg",
+    "milestones": [
+      "Focused on building a scalable ”App Store for Robotics,” enabling modular deployment of autonomous ”missions”\nlike parking reinforcement."
+    ]
+  },
+  {
+    "background": [
       "#F8D9B2",
       "#C8904D"
     ],
     "companyName": "Reindeere",
     "jobTitle": "Software Engineer Intern",
     "date": "2026",
-    "companyLogo": "./assets/svgs/experience_reindeere.svg",
+    "companyLogo": "./assets/svgs/experience-reindeere.svg",
     "milestones": [
       "Focused on building a scalable ”App Store for Robotics,” enabling modular deployment of autonomous ”missions”\nlike parking reinforcement."
     ]
