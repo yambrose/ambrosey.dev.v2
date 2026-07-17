@@ -9,6 +9,16 @@ const projectDialog = document.getElementById("project-dialog");
 const experiencesPath = "../data/experience_data.json";
 const experiencesContainer = document.querySelector(".experiences-flex");
 
+const dialogElements = {
+    image: projectDialog.querySelector('img'),
+    title: projectDialog.querySelector('h2'),
+    description: projectDialog.querySelector('section > p'),
+    skillsContainer: projectDialog.querySelector('.project-skills'),
+    sourceLink: projectDialog.querySelector('.project-src-link'),
+    liveLink: projectDialog.querySelector('.project-live-link'),
+    year: projectDialog.querySelector('.project-year'),
+};
+
 const getJsonMetadata = async (path) => {
     const response = await fetch(path);
     return await response.json();
@@ -49,48 +59,41 @@ async function renderProjects() {
 }
 
 function openProjectDialog(project) {
-    projectDialog.querySelector("img").src = project.imageUrl;
-    projectDialog.querySelector("img").alt = project.name;
-    projectDialog.querySelector("h2").textContent = project.name;
-    projectDialog.querySelector("section > p").textContent = project.description;
+    const { image, title, description, skillsContainer, sourceLink, liveLink, year } = dialogElements;
 
-    const skillsContainer = projectDialog.querySelector(".project-skills");
-    skillsContainer.innerHTML = "";
+    image.src = project.imageUrl;
+    image.alt = project.name;
+    title.textContent = project.name;
+    description.textContent = project.description;
+
+    skillsContainer.innerHTML = '';
     project.skills.forEach(skill => {
-        const span = document.createElement("span");
+        const span = document.createElement('span');
         span.textContent = skill;
         skillsContainer.appendChild(span);
     });
 
-    const projectSource = projectDialog.querySelector(".project-src-link");
-    const projectLive = projectDialog.querySelector(".project-live-link");
-    const projectYear = projectDialog.querySelector(".project-year");
+    sourceLink.classList.remove('disabled');
 
-    // Reset the source link state
-    projectSource.classList.remove("disabled");
-
-    if (project.sourceUrl === "" || project.sourceUrl == null) {
-        projectSource.textContent = "private";
-        projectSource.classList.add("disabled");
-        projectSource.removeAttribute("href");
+    if (!project.sourceUrl) {
+        sourceLink.textContent = 'private';
+        sourceLink.classList.add('disabled');
+        sourceLink.removeAttribute('href');
     } else {
-        projectSource.textContent = "source";
-        projectSource.href = project.sourceUrl;
-        projectSource.classList.remove("disabled");
+        sourceLink.textContent = 'source';
+        sourceLink.href = project.sourceUrl;
     }
 
-    if (project.liveUrl === "" || project.liveUrl == null) {
-        projectLive.textContent = "unavailable";
-        projectLive.classList.add("disabled");
-        projectLive.removeAttribute("href");
+    if (!project.liveUrl) {
+        liveLink.textContent = 'unavailable';
+        liveLink.classList.add('disabled');
+        liveLink.removeAttribute('href');
     } else {
-        projectLive.textContent = "live";
-        projectLive.href = project.liveUrl;
-        projectLive.classList.remove("disabled");
+        liveLink.textContent = 'live';
+        liveLink.href = project.liveUrl;
     }
 
-    projectYear.textContent = `- ${project.year} -`
-
+    year.textContent = `- ${project.year} -`;
     projectDialog.showModal();
 }
 
