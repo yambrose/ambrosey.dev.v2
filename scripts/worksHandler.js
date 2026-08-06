@@ -74,6 +74,7 @@ function openProjectDialog(project) {
     });
 
     sourceLink.classList.remove('disabled');
+    liveLink.classList.remove('disabled');
 
     if (!project.sourceUrl) {
         sourceLink.textContent = 'private';
