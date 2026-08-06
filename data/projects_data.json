@@ -21,7 +21,7 @@
   },
   {
     "name": "pinnip",
-    "description": "Entry to the \"Global Game Jam 2026\"--An aim game with a twist!",
+    "description": "Entry to the \"Global Game Jam 2026\": An aim game with a twist!",
     "skills": ["Unity", "C#", "Pixel Art"],
     "year": "2026",
     "imageUrl": "./assets/images/pinnip.png",
@@ -31,7 +31,7 @@
   },
   {
     "name": "Cell Growth Simulator",
-    "description": "Heavily inspired by Conway’s Game of Life---The Cell Growth Simulator is a web app that simulates bacterial growth on a grid based canvas.",
+    "description": "A React app that simulates bacterial growth on a 200x200 grid based canvas.",
     "skills": ["React", "TypeScript"],
     "year": "2025",
     "imageUrl": "./assets/images/cell-growth-simulator.png",
@@ -51,7 +51,7 @@
   },
   {
     "name": "Minezone Website",
-    "description": "A full-stack website designed for a Mincraft server witih 300+ active players.",
+    "description": "A full-stack website designed for a Mincraft server witih 300+ active players (it's down now though 🥲).",
     "skills": ["React", "Django", "AWS", "DynamoDB"],
     "year": "2026",
     "imageUrl": "./assets/images/minezone.png",
