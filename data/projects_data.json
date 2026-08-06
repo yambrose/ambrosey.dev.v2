@@ -1,5 +1,25 @@
 [
   {
+    "name": "Custom Macro Pad",
+    "description": "My custom KiCad-designed macro pad with 3D-printed enclosure, running KMK on CircuitPython. (my first hardware project very happy)",
+    "skills": ["Autodesk Fusion", "KiCad", "CircuitPython", "Raspberry Pi"],
+    "year": "2026",
+    "imageUrl": "./assets/images/macro-pad.png",
+    "sourceUrl": "https://github.com/yambrose/yambroses-macro-pad",
+    "liveUrl": "",
+    "type": "hardware"
+  },
+  {
+    "name": "Self-Hosted URL Shortener",
+    "description": "My cool local URL shortener, using Docker, PostgreSQL and FastAPI.",
+    "skills": ["FastAPI", "Docker", "PostgreSQL", "Python"],
+    "year": "2026",
+    "imageUrl": "./assets/images/url-shortener.png",
+    "sourceUrl": "https://github.com/yambrose/yambroses-url-shortener",
+    "liveUrl": "",
+    "type": "web"
+  },
+  {
     "name": "pinnip",
     "description": "Entry to the \"Global Game Jam 2026\"--An aim game with a twist!",
     "skills": ["Unity", "C#", "Pixel Art"],
