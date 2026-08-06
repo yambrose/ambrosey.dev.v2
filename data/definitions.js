@@ -3,5 +3,6 @@ export const ProjectColours = {
     'data': '#52d66a',
     'ml/ai': '#435dd6',
     'library': '#efd05a',
-    'game': '#bc60e1'
+    'game': '#bc60e1',
+    'hardware': '#dd3d58'
 }
