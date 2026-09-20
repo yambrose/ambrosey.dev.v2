@@ -24,18 +24,13 @@
     padding-top: clamp(var(--nav-height) - 4rem, 20vh, var(--nav-height))
 }
 
-.scene > .works-section {
-    flex: 1;
-    margin: 0.5rem;
-}
-
-.scene > .works-section h1 {
+.works-section h1 {
     color: var(--text-color);
     margin-bottom: 1.5rem;
     display: inline-block;
 }
 
-.scene > .works-section h1::after {
+.works-section h1::after {
     content: '';
     display: block;
     width: 40%;
@@ -45,9 +40,11 @@
 }
 
 .works-section {
+    flex: 1;
     background: color-mix(in srgb, var(--very-dark-shading) 75%, transparent);
     outline: 2px var(--dark-shading) solid;
-    padding: clamp(1rem, 1.5vw + 0.5rem, 2rem);
+    margin: 0.5rem;
+    padding: clamp(0.5rem, 1.5vw + 0.5rem, 2rem);
 }
 
 /* Experience */
@@ -85,16 +82,15 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .company .name {
     text-transform: uppercase;
-    font-size: clamp(1.25rem, 1.5vw + 0.5rem, 2rem);
+    font-size: clamp(1.1rem, 1.5vw + 0.5rem, 2rem);
 }
 
 .company .role-name, .company .date {
-    font-size: clamp(1.25rem, 0.5vw + 0.5rem, 1.5rem);
+    font-size: clamp(0.95rem, 0.5vw + 0.5rem, 1.5rem);
     font-weight: 400;
 }
 
@@ -263,8 +259,7 @@ body:has(#project-dialog[open]) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    font-size: clamp(1.15rem, 1.25vw + 0.25rem, 1.5rem);
+    font-size: clamp(1.1, 1.25vw + 0.25rem, 1.5rem);
 }
 
 #project-dialog .project-footer a {
@@ -299,6 +294,13 @@ body:has(#project-dialog[open]) {
         flex-direction: column;
         align-items: center;
         margin: 0;
+    }
+
+    .works-section {
+        background: none;
+        outline: none;
+        margin: 0;
+        padding: clamp(0.5rem, 1.5vw + 0.5rem, 2rem);
     }
 
     .experience {
