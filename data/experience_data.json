@@ -2,14 +2,14 @@
   {
     "background": [
       "#8BB53E",
-      "#78B24A"
+      "#598221"
     ],
     "companyName": "Shopify",
-    "jobTitle": "Incoming Software Engineer Intern",
+    "jobTitle": "Software Engineer Intern",
     "date": "Sep 2026",
     "companyLogo": "./assets/svgs/experience-shopify.svg",
     "milestones": [
-      "Soon™"
+      "Developing features for Shopify’s online store editor, working with Liquid to support storefront customization."
     ]
   },
   {
@@ -22,7 +22,9 @@
     "date": "May 2026 - Now",
     "companyLogo": "./assets/svgs/experience-reindeere.svg",
     "milestones": [
-      "Focused on building a scalable ”App Store for Robotics,” enabling modular deployment of autonomous ”missions”\nlike parking reinforcement."
+      "Contributed to a scalable “App Store for Robotics,” enabling modular deployment of autonomous “missions” like parking reinforcement, using Docker and AWS",
+      "Designed the customer-facing Store page in Nuxt.js, translating product and UX requirements into a responsive, production-ready frontend",
+      "Established a unified design language across the Management portal and Store page, ensuring consistent UI and responsiveness across screen breakpoints"
     ]
   },
   {
